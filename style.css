@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+}
+
+.Name {
+  display: inline;
+  margin: 0;
+}
+
+.navBar {
+  background-color: rebeccapurple;
+  overflow: hidden;
+}
+
+.Name h3 {
+  background-color: beige;
+  display: inline;
+  position: relative;
+}
+
+ul {
+  display: inline;
+  margin: 0;
+}
+
+ul li {
+  position: relative;
+  display: inline;
+}
+
+nav {
+  display: inline;
+}
+
+.PInfo {
+  display: inline-block;
+  position: relative;
+  margin-top: 0px;
+  padding-top: 0;
+}
+
+.PImage {
+  display: inline;
+  position: relative;
+  height: 300px;
+}
+
+.PImage img {
+  height: 300px;
+}
