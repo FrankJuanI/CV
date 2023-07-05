@@ -2,6 +2,13 @@ body {
   margin: 0;
 }
 
+header {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 10%;
+  text-align: center;
+}
+
 .Name {
   display: inline;
   margin: 0;
@@ -12,7 +19,12 @@ body {
   overflow: hidden;
 }
 
+.Name h4 {
+  font-size: 56px;
+}
+
 .Name h3 {
+  font-size: 48px;
   background-color: beige;
   display: inline;
   position: relative;
@@ -28,23 +40,38 @@ ul li {
   display: inline;
 }
 
+.PInfo {
+  text-align: end;
+}
+
 nav {
   display: inline;
 }
 
 .PInfo {
-  display: inline-block;
-  position: relative;
-  margin-top: 0px;
+  margin-left: 5%;
+  display: inline;
   padding-top: 0;
 }
 
 .PImage {
   display: inline;
   position: relative;
-  height: 300px;
+  margin-bottom: 0px;
 }
 
 .PImage img {
-  height: 300px;
+  object-fit: fill;
+  height: 600px;
+  border-radius: 50%;
+}
+
+.icons {
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+  display: flex;
+}
+
+.icons img {
+  margin: 0px 0px 0px 0px;
 }
