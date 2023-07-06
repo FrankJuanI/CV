@@ -1,77 +1,96 @@
 body {
   margin: 0;
-}
-
-header {
-  display: flex;
-  margin-top: 5%;
-  margin-left: 10%;
-  text-align: center;
+  padding: 0;
 }
 
 .Name {
   display: inline;
-  margin: 0;
+  margin-left: 7%;
+  font-size: 36px;
 }
 
 .navBar {
-  background-color: rebeccapurple;
   overflow: hidden;
-}
-
-.Name h4 {
-  font-size: 56px;
-}
-
-.Name h3 {
-  font-size: 48px;
-  background-color: beige;
-  display: inline;
-  position: relative;
-}
-
-ul {
-  display: inline;
-  margin: 0;
-}
-
-ul li {
-  position: relative;
-  display: inline;
-}
-
-.PInfo {
-  text-align: end;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  line-height: 7vh;
 }
 
 nav {
   display: inline;
+  padding-right: 7%;
 }
 
-.PInfo {
-  margin-left: 5%;
+ul {
   display: inline;
-  padding-top: 0;
 }
 
-.PImage {
-  display: inline;
-  position: relative;
-  margin-bottom: 0px;
+ul li {
+  display: inline-block;
+  justify-content: space-between;
+  border-left: 0;
+  list-style: none;
 }
 
-.PImage img {
-  object-fit: fill;
-  height: 600px;
-  border-radius: 50%;
+ul li a {
+  padding: 0px 20px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.icons {
-  text-align: center;
-  margin: 20px 0px 0px 0px;
+.blank {
+  height: 10vh;
+}
+
+header {
+  padding: 0% 10%;
+  margin: auto;
+  align-items: center;
+  width: 70%;
   display: flex;
 }
 
+.PImage img {
+  height: 400px;
+  border-radius: 50%;
+}
+
+.PInfo {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.Presentation {
+  position: relative;
+  display: block;
+  line-height: 40%;
+  text-align: end;
+}
+
+.Presentation h4 {
+  font-size: 36px;
+}
+
+.Presentation h3 {
+  font-size: 36px;
+}
+
+.DownloadButtons {
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .icons img {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 16px;
 }
