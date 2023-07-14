@@ -1,10 +1,31 @@
-body {
+body{
+  margin: 0;
+}
+
+.background {
   margin: 0;
   padding: 0;
-  background-image: url(assets/foggy-landscape-forest-in-the-morning-beautiful-sunrise-mist-cover-mountain-background-at-countryside-winter-free-photo.jpeg);
+  background-image:url(assets/foggy-landscape-forest-in-the-morning-beautiful-sunrise-mist-cover-mountain-background-at-countryside-winter-free-photo.jpeg);
+  background-attachment: fixed;
   background-position: center center;
   background-size: cover;
+
 }
+
+.background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/foggy-landscape-forest-in-the-morning-beautiful-sunrise-mist-cover-mountain-background-at-countryside-winter-free-photo.jpeg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
+} 
 
 .Name {
   display: inline;
@@ -13,18 +34,25 @@ body {
 }
 
 .navBar {
-  position: static;
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 5vh;
+  padding: 0;
+  padding: 0;
   overflow: hidden;
   justify-content: space-between;
   display: flex;
   align-items: center;
   background-color: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
+  z-index: 3;
 }
 
 nav {
   display: inline;
   padding-right: 7%;
+  position: static;
 }
 
 ul {
@@ -44,22 +72,25 @@ ul li a {
   text-decoration: none;
 }
 
-.blank {
-  height: 5vh;
-}
 
 header {
-  padding-right: 10%;
+  padding-right: 5%;
   padding-left: 5%;
   margin: auto;
   align-items: center;
   width: 70%;
+  height: 80vh;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: rgba(24, 24, 24, 0.361);
 }
 
 .PImage {
-  width: 60%;
+  width: 40%;
 }
 
 .PImage img {
@@ -68,7 +99,7 @@ header {
 }
 
 .PInfo {
-  width: 40%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -98,6 +129,12 @@ header {
   align-items: center;
 }
 
+.DownloadButtons button{
+  border: solid;
+  background-color: transparent;
+  width: 40%;
+}
+
 .icons {
   margin-top: 60px;
   display: flex;
@@ -108,4 +145,131 @@ header {
 .icons img {
   margin: 0px 16px;
   height: 60px;
+}
+
+
+
+main{
+  display: flex;
+  flex-direction: column;
+  max-width: 100em;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+.interests-section{
+  margin-top: 25vh;
+  padding-bottom: 25vh;
+  display: block;
+  flex-direction: column;
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: rgba(24, 24, 24, 0.361);
+}
+
+.interests-section h2, .knowledge-section h2{
+  font-size: 4em;
+}
+
+.intereses-cards-section{
+  display: flex;
+  justify-content: space-between;
+  padding: 0em 5em;
+  
+}
+
+.intereses-card{
+  width: 18%;
+  border: 1px;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: rgba(24, 24, 24, 0.085);
+  box-shadow: 0px 0px 8px 1px;
+}
+
+.intereses-card::before{
+  filter: blur(30px);
+}
+
+.intereses-card h3{
+  font-size: 1.5em;
+}
+
+.intereses-card img{
+  width: 60%;
+  margin: 40px 0px;
+}
+
+.knowledge-section{
+  min-height: 800px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-color: rgba(24, 24, 24, 0.361);
+}
+
+.knowledge-card{
+  margin: 0em 5em;
+  padding: 40px;
+  display: flex;
+  height: 50%;
+  max-width: 100em;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
+  padding: 40px;
+  background-color: rgba(24, 24, 24, 0.04);
+  box-shadow: 0px 0px 10px 1px;
+}
+
+.selection-knowledge{
+  padding: 30px;
+  display: flex;
+  position: relative;
+  border-right-style: solid;
+  border-right-width: 1px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+}
+
+
+.selection-knowledge :first-child{
+  margin-top: 20%px;
+
+}
+
+.selection-knowledge :last-child{
+  margin-bottom: 20%px;
+
+}
+
+.selection-row{
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+  padding-left: 10px;
+}
+
+
+
+.knowledge{
+
 }
