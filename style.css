@@ -33,51 +33,71 @@ body {
 }
 
 .navBar {
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
-  height: 15vh;
-  margin-bottom: 5vh;
-  padding: 0;
-  padding: 0;
-  overflow: hidden;
+  max-width: 100em;
+  margin: 0 auto;
+  margin-top: 60px;
+  height: 80px;
   justify-content: space-between;
   display: flex;
   align-items: center;
   background-color: transparent;
   backdrop-filter: blur(3px);
   z-index: 3;
+  transition: background-color 1s ease-in-out;
 }
 
+
 nav {
-  display: inline;
+  display: flex;
   padding-right: 7%;
   position: static;
+  width: auto;
 }
 
 ul {
-  display: inline;
+  display: flex;
+  width: 100%;
+  height: 30px;
 }
 
 ul li {
-  display: inline-block;
   justify-content: space-between;
   border-left: 0;
   list-style: none;
+  position: relative;
+  width: auto;
+  margin: 0 auto;
 }
 
 ul li a {
+  position: relative;
+  display: inline-block;
   padding: 0px 20px;
   font-weight: bold;
   text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.3em;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover{
+  color: white;
+  transform: scale(1.5);
+  background-color: rgba(0, 0, 0, 0.421);
+  border-radius: 8px;
 }
 
 header {
   padding-right: 5%;
   padding-left: 5%;
-  margin: auto;
+  margin: 0 auto;
   align-items: center;
   width: 70%;
-  height: 80vh;
+  max-width: 100em;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -85,7 +105,11 @@ header {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-color: rgba(24, 24, 24, 0.361);
+  padding-bottom: 1.5em;
+  min-height: 80vh;
 }
+
+
 
 .PImage {
   width: 40%;
@@ -112,30 +136,69 @@ header {
 .Presentation {
   position: relative;
   display: block;
-  line-height: 40%;
   text-align: end;
-}
-
-.Presentation h4 {
-  font-size: 36px;
+  margin-bottom: 5%;
 }
 
 .Presentation h3 {
-  font-size: 36px;
+  position: relative;
+  margin: 0;
 }
+
+.Presentation h2 {
+  position: relative;
+  margin: 0;
+}
+
+/* @media (max-width: 768px) {
+  .Presentation h2 {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: red;
+    content: "Este es un texto más corto";
+  }
+} */
+
 
 .DownloadButtons {
   display: flex;
+  flex-direction:row;
   width: 40%;
   justify-content: space-around;
   align-items: center;
 }
 
 .DownloadButtons button {
+  display: flex;
   border: solid;
   background-color: transparent;
   width: 40%;
+  justify-content: center;
+  height: 50px;
 }
+
+.DownloadButtons button:hover{
+  background-color: rgba(0, 0, 0, 0.306);
+}
+
+.DownloadButtons button:hover a{
+  color: white;
+}
+
+
+.DownloadButtons button p{
+  display: inline-block;
+}
+
+
+.DownloadButtons button p img{
+  display: inline-block;
+  object-fit:scale-down ;
+  height: 15px;
+  margin-right: 10px;
+}
+
 
 .icons {
   margin-top: 60px;
@@ -158,15 +221,37 @@ main {
 }
 
 .interests-section {
-  min-height: 100vh;
+  min-height: 80vh;
   max-width: 100em;
   display: flex;
+  justify-content: center;
+  padding-bottom: 10vh;
   flex-direction: column;
   text-align: center;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-color: rgba(24, 24, 24, 0.361);
 }
+
+
+@media screen and (max-width: 1024px) {
+  header {
+    width: calc(100% - 2em);
+    padding: 0em 1.5em;
+  }
+
+  .interests-cards-section{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intereses-card{
+    width: 50%;
+  }
+}
+
+
+
 
 .interests-section h2,
 .knowledge-section h2,
@@ -177,14 +262,22 @@ main {
 
 .intereses-cards-section {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
   padding: 0em 5em;
 }
 
+.intereses-card:first-child{
+  margin-bottom: 1.5em;
+}
+
 .intereses-card {
+  margin: 0em 1em;
   width: 18%;
-  border: 1px;
-  border-style: solid;
+  height: 30%;
+  border: 0px solid;
+  min-width: 200px;
   border-radius: 20px;
   padding: 2em;
   display: flex;
@@ -214,6 +307,7 @@ main {
   min-height: 800px;
   height: 100vh;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   position: relative;
   text-align: center;
@@ -229,11 +323,10 @@ main {
   display: flex;
   height: 50%;
   max-width: 100em;
-  border-style: solid;
-  border-width: 1px;
+  border: 0px solid;
   border-radius: 30px;
   padding: 40px;
-  background-color: rgba(24, 24, 24, 0.04);
+  background-color: rgba(24, 24, 24, 0.076);
   box-shadow: 0px 0px 10px 1px;
 }
 
